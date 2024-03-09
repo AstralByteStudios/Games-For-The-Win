@@ -1,0 +1,17 @@
+---
+export interface Props {
+    id: string;
+    name: string;
+    img: string;
+}
+
+const { id, name, img } = Astro.props;
+---
+
+<!-- <a class="flex justify-around items-center" href={`/${id}`}> -->
+    <img
+        class="aspect-video rounded-lg shadow-2xl"
+        src={img}
+        alt={`Portada del videojuego ${name}`}
+    />
+<!-- </a> -->

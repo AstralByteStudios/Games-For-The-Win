@@ -1,0 +1,18 @@
+---
+import ItemGame from "./ItemGame.astro";
+
+import { bestsellersgames } from '../data/bestsellersgame.js'
+---
+
+<div class="grid grid-cols-4 gap-10 m-auto max-w-7xl py-9 md:grid-cols-3">
+    {
+        bestsellersgames.map(({ id, name, img }) => {
+            return (
+                    <li class="list-none flex justify-center items-center flex-col">
+                    <ItemGame id={id} name={name} img={img} />
+                    <p class="text-xl">{name}</p>
+                </li>
+            );
+        })
+    }
+</div>
